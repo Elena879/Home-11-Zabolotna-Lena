@@ -1,0 +1,74 @@
+.todo-section {
+    h1 {
+        font-weight: 400;
+        font-size: 75px;
+        text-align: right;
+        padding-right: 300px;
+        span {
+            color: $secondary-color;
+        }
+    }
+
+    .task-list {
+        .input-task {
+            @include reset-input-style;
+            padding: 14px 0 5px 0;
+            max-width: 500px;
+            width: 100%;
+            border-bottom: 2px solid $main-color;
+            font: 400 30px/1 $main-font;
+            color: $main-color;
+        }
+
+        .add-task {
+            @include reset-input-style;
+            font: 400 50px/0.96 $main-font;
+
+            color: $main-color;
+            cursor: pointer;
+            &:hover {
+                transition: 0.3s;
+                color: $secondary-color;
+            }
+        }
+    }
+
+    .todo-container {
+        li {
+            font: 400 30px/1 $main-font;
+        }
+        .delete {
+            @include reset-input-style;
+            cursor: pointer;
+            font: 400 30px/1 $main-font;
+            color: $secondary-color;
+            margin-left: 50px;
+
+            &:hover {
+                opacity: 0.7;
+                transition: 0.3s;
+                color: $main-color;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        .change {
+            background: none;
+            cursor: pointer;
+            font: 400 18px/1 $main-font;
+            &:focus {
+                outline: none;
+            }
+            &:hover {
+                opacity: 0.7;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+
+
+
+
