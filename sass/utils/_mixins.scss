@@ -1,5 +1,6 @@
-@mixin reset-input-style {
-    background: none;
-    border: none;
-    outline: none;
+@mixin reset-input-style ($value){
+    background: $value;
+    border: $value;
+    outline: $value ;
 }
+

@@ -8,10 +8,11 @@
             color: $secondary-color;
         }
     }
-
-    .task-list {
+    .form {
+        display: flex;
+        justify-content: flex-start;
         .input-task {
-            @include reset-input-style;
+            @include reset-input-style(none);
             padding: 14px 0 5px 0;
             max-width: 500px;
             width: 100%;
@@ -21,9 +22,8 @@
         }
 
         .add-task {
-            @include reset-input-style;
+            @include reset-input-style(none);
             font: 400 50px/0.96 $main-font;
-
             color: $main-color;
             cursor: pointer;
             &:hover {
@@ -35,15 +35,14 @@
 
     .todo-container {
         li {
+            margin-top: 20px;
             font: 400 30px/1 $main-font;
         }
         .delete {
-            @include reset-input-style;
+            @include reset-input-style(none);
             cursor: pointer;
             font: 400 30px/1 $main-font;
             color: $secondary-color;
-            margin-left: 50px;
-
             &:hover {
                 opacity: 0.7;
                 transition: 0.3s;
@@ -53,22 +52,17 @@
                 outline: none;
             }
         }
-        .change {
-            background: none;
-            cursor: pointer;
-            font: 400 18px/1 $main-font;
-            &:focus {
-                outline: none;
-            }
-            &:hover {
-                opacity: 0.7;
-                transition: 0.3s;
-            }
+        .checkbox {
+            margin-left: 70px;
+            border: 1px solid $secondary-color;
         }
     }
 }
 
-
+.done {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
 
 
 
